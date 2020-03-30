@@ -1,2 +1,3 @@
 articles/*
+report/*[.log, .aux, .bbl, .blg, .gz]
 

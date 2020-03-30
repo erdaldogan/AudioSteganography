@@ -1,0 +1,50 @@
+\documentclass[twocolumns]{IEEEtran}
+
+\renewcommand\IEEEkeywordsname{Keywords}
+
+\author{
+	\IEEEauthorblockN{Erdal Sidal Dogan, Mert Komurcuoglu, Berkay Kurkcu} \\
+	\IEEEauthorblockA{Facult of Engineering, MEF University \\
+		Electrical \& Electronics Engineering Department}
+}
+\title{Audio Steganography}
+
+\begin{document}
+	\maketitle
+	\begin{abstract}
+		Digital Multimedia files such as images, videos, audio files etc. became ubiquitous in our lives. We can leverage these multimedia files for communication. Steganography is a technique for hiding information in these files in an imperceptible manner. By manipulating the multimedia signals, one can transmit messages to another in such a way that original signal would be indistinguishable from the manipulated one by a human. This paper demonstrates an application of audio steganography using MATLAB.
+	\end{abstract}
+	\begin{IEEEkeywords}
+		Multimedia, steganography, signal.
+	\end{IEEEkeywords}
+	\section{Project Plan}
+	Steganography plays an important role in secret communication and data safety. There are many applications of steganography on different kinds of multimedia signals such as image, audio, video etc. along with multiple number of algorithms being used for similar purposes. In this project, we will be implementing the \textit{Least Significant Bit} algorithm on Audio signals using \textit{MATLAB}. First stage of the project was to determine which algorithm to use. As a results of our research, we decided on LSB. Since we don't need sophisticated needs such as fast encryption/decryption, higher amount of data transfer (bandwidth) etc, we considered the LSB would be an appropriate way to go. We're planning to start the implementation in the upcoming weeks. As we can foresee, the implementation consists of four stages;
+	\begin{itemize}
+		\item Encryption of the message, preferably text to binary.
+		\item Embedding the message into the audio signal
+		\item Extracting and decrypting the message
+		\item Testing the program
+	\end{itemize}
+	Considering our schedule, each of the bullet points above should take no more than a week. Therefore, we anticipate we can deliver by the end of the April, or first week of May.
+	
+	\subsection{Literature Review}
+	Data hiding in the least significant bits (LSBs) of
+	audio samples in the time domain is one of the simplest
+	algorithms with very high data rate of additional
+	information . LSB coding  is one of the earliest
+	techniques studied in the information hiding and
+	watermarking area of digital audio (as well as other media
+	types.  
+	
+	If we were to use more sophisticated methods we could use \textit{Threshold Based LSB} or \textit{Watermarking Method} algorithms. In \textit{Threshold Based LSB} method number of message bits changes depending on the amplitude of sampled signal[REFERANCE]. On the otherhand in \textit{Watermarking Method}, the LSB watermark encoder usually selects a subset and limits the number of of LSBs that can be imperceptibly modified during watermark embedding. The substitution operation on the LSBs is performed on this subset[REFERANCE].
+	
+	
+	Informations that we had from articles, we observed that,if
+	16 bits per sample audio sequences are used,  the maximum LSB depth that
+	can be used for LSB-based watermarking without causing
+	noticeable perceptual distortion is the fourth LSB layer. According to the article, The tests
+	were performed with a large collection of audio samples
+	and individuals with different backgrounds and musical
+	experience.
+
+\end{document}

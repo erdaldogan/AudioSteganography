@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.29)  30 MAR 2020 20:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.29)  30 MAR 2020 22:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -138,27 +138,26 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 23.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 23.
-[1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+(./document.bbl) [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/p
+dftex.map}
 
 
-
-]
-(./document.aux) ) 
+] (./document.aux) ) 
 Here is how much of TeX's memory you used:
- 1038 strings out of 492616
- 19165 string characters out of 6129480
- 85072 words of memory out of 5000000
- 5031 multiletter control sequences out of 15000+600000
- 34085 words of font info for 63 fonts, out of 8000000 for 9000
+ 1051 strings out of 492616
+ 19344 string characters out of 6129480
+ 87072 words of memory out of 5000000
+ 5040 multiletter control sequences out of 15000+600000
+ 35221 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  26i,5n,18p,856b,166s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.e
-nc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
-></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/loc
-al/texlive/2019/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texliv
-e/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/tex
-mf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on document.pdf (1 page, 55743 bytes).
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r
+.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
+fb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/l
+ocal/texlive/2019/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texl
+ive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/t
+exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on document.pdf (1 page, 62501 bytes).
 PDF statistics:
  29 PDF objects out of 1000 (max. 8388607)
  20 compressed objects within 1 object stream

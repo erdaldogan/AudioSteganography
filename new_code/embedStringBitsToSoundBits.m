@@ -9,13 +9,13 @@ function sound_bits = embedStringBitsToSoundBits(sound_bits, string_bits)
     
     for i=0:string_len
         letter = string_bits(i+1,:);
-        if letter == "1011100"
-            fprintf('Reached to the end!\n');
-            fprintf('Last modified line %d!\n', ((i-1)*7)+j);
-            return;
-        end
         for j=1:7
             sound_bits((i*7)+j, 15) = letter(j);
+        end
+        if letter == "1011100"
+            fprintf('Reached to the end!\n');
+            fprintf('Last modified line %d!\n', ((i)*7)+j);
+            return;
         end
     end
 end

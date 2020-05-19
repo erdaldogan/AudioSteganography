@@ -1,0 +1,35 @@
+clear all; clc;
+%info = audioinfo()
+%soundsc(sound);
+
+[sound_bits, neg_loc] = getBitsFromSound("chirp.wav");
+string_bits = getBitsFromString("msg.txt");
+
+sound_len = length(sound_bits);
+string_len = length(string_bits(:,1));
+
+% for i=0:sound_len/7
+%     for j=1:7
+%         sound_index = (i*7)+j;
+%         str_index = int8(sound_index/7) + 1;
+%         fprintf("sound bits %s\n", sound_bits(sound_index, :));
+%         fprintf("str bits: %s\n", string_bits(str_index,:));
+%         %fprintf("sound_index = %d, j = %d\n", (i*7)+j, j);
+%     end
+% end
+
+for i=0:string_len
+    letter = string_bits(i+1,:);
+    if letter == "1011100"
+        fprintf('Reached to the end!\n');
+        return;
+    end
+    for j=1:7
+        (i*7)+j
+        sound_bits((i*7)+j, j) = letter(j);
+    end
+end
+
+
+
+

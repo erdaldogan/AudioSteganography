@@ -1,18 +1,19 @@
     clear; clc; close all;
     [Y, Fs]=audioread('chirp.wav');
-    figure;
-    plot(Y);
-    samples = Y*32768;
+%    figure;
+%    plot(Y);
+    samples = Y*32768; % 32768 = 2^15
     sample_int = int16(samples);
     sample_int_abs = abs(sample_int);
 
-    scalar_matrix = sample_int./sample_int_abs;
+    scalar_matrix = sample_int ./ sample_int_abs;
     scalar_matrix2 = scalar_matrix;
     for i=1:numel(scalar_matrix)
         if scalar_matrix(i)==0
             scalar_matrix2(i)=1;
         end
     end
+    
     sample_uint16=uint16(sample_int_abs);
     encKey=file2bin('encryptionKey.txt')';
     %encKey=encKey1';
@@ -44,8 +45,8 @@
   for i=100:L
    % disp(i);
             
-            [bit,s]=getBits(s,1);
-            nsample_uint16(i)=LSB(sample_uint16(i),bit,1);
+    [bit,s]=getBits(s,1);
+     nsample_uint16(i)=LSB(sample_uint16(i),bit,1);
            
       
   end

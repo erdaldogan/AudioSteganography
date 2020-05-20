@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.29)  20 MAY 2020 15:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.29)  20 MAY 2020 17:16
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -228,6 +228,23 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 )
+(/usr/local/texlive/2019/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
 
 LaTeX Warning: Unused global option(s):
     [twocolumns].
@@ -235,18 +252,18 @@ LaTeX Warning: Unused global option(s):
 (./document.aux)
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 
 -- Lines per column: 58 (exact).
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -324,49 +341,62 @@ Package epstopdf Info: Source file: <../figures/binary_num.eps>
 (epstopdf)                    size: 17492 bytes
 (epstopdf)             Command: <epstopdf --outfile=../figures/binary_num-eps-c
 onverted-to.pdf ../figures/binary_num.eps>
-(epstopdf)             \includegraphics on input line 51.
+(epstopdf)             \includegraphics on input line 54.
 Package epstopdf Info: Output file is already uptodate.
 <../figures/binary_num-eps-converted-to.pdf, id=1, 379.4175pt x 67.25125pt>
 File: ../figures/binary_num-eps-converted-to.pdf Graphic file (type pdf)
 <use ../figures/binary_num-eps-converted-to.pdf>
 Package pdftex.def Info: ../figures/binary_num-eps-converted-to.pdf  used on in
-put line 51.
+put line 54.
 (pdftex.def)             Requested size: 189.70828pt x 33.62553pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
-(./document.bbl [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pd
-ftex.map}
+<../figures/ascii.pdf, id=2, 183.67761pt x 106.32437pt>
+File: ../figures/ascii.pdf Graphic file (type pdf)
+<use ../figures/ascii.pdf>
+Package pdftex.def Info: ../figures/ascii.pdf  used on input line 87.
+(pdftex.def)             Requested size: 183.67714pt x 106.3241pt.
+[1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <../figures/binary_num-eps-converted-to.pdf>]) [2
+ <../figures/binary_num-eps-converted-to.pdf>]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 92.
 
-] (./document.aux) ) 
+(/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 92.
+ (./document.bbl) [2 <../figures/ascii.pdf, page is rotated 90 degrees>] (./doc
+ument.aux) ) 
 Here is how much of TeX's memory you used:
- 3972 strings out of 492616
- 64734 string characters out of 6129480
- 140494 words of memory out of 5000000
- 7870 multiletter control sequences out of 15000+600000
- 35675 words of font info for 66 fonts, out of 8000000 for 9000
+ 4481 strings out of 492616
+ 70707 string characters out of 6129480
+ 152727 words of memory out of 5000000
+ 8365 multiletter control sequences out of 15000+600000
+ 36705 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,39p,722b,252s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r
-.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.
-pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.p
-fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
-usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
-sr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr
-/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/tex
-live/2019/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2019
-/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dis
-t/fonts/type1/urw/times/utmri8a.pfb>
-Output written on document.pdf (2 pages, 118850 bytes).
+ 41i,9n,39p,722b,265s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</u
+sr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
+/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
+l/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/t
+exlive/2019/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2
+019/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2019/texm
+f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fon
+ts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/
+urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/
+utmri8a.pfb>
+Output written on document.pdf (2 pages, 136098 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 81 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

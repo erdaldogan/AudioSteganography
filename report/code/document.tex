@@ -2,6 +2,8 @@
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{amsmath}
+\usepackage{xcolor}
+
 \graphicspath{{../figures/}}
 \renewcommand\IEEEkeywordsname{Keywords}
 
@@ -45,6 +47,7 @@
 	experience.
 	
 	\section{Method}
+	\subsection{Embedding the Message to the Audio}
 	Audio signals consist of thousands of samples which are represented as numerical values. As one can tell, all the numerical values are being stored in binary format by our computers. The binary format consist of 1's and 0's only. By looking at the positions of these 0 and 1's, we can get a decimal number. Right most digit of a binary number corresponds to $2^0$, as you move from right to left, power of 2 increases by 1. By adding the numbers shown as powers of 2 at where the bits on that position is 1, you can get a decimal number.
 	\begin{figure}[h]
 		\centering
@@ -64,17 +67,68 @@
 	The samples can be multiplied with a greater number to become integer values because the precision numbers representations are more complex than integer. Our input signal was decoded with 16 bits per sample. Thus, we multiplied each sample with $2^{15} = 32768$ for them to become integers that can be represented by 16 bits.
 	\begin{equation}
 		\begin{bmatrix}
-		'000000000110011' \\
+		'000000000110010' \\
 		'000000000000000' \\
-		'000000000011000' \\
-		'000000110100001' \\
+		'000000000011001' \\
+		'000000110100000' \\
+		'000100100101011' \\
+		'000010110101110' \\
+		'001000110010010' \\
 		\vdots
 		\end{bmatrix} \\ \\		
 	\end{equation}
 	\begin{center}
-		Actual first 4 sample of the audio file
+		First 7 sample of an audio file
 	\end{center}
+	
+	Now , let's focus on getting the binary representation of the message we want to embed into the audio file. We read this message from a .txt file, as a String, also, we add the symbol \ as an indicator of end of string. Similar to the audio files, the strings are also can be represented by integer values. As we know, a string is a sequence of characters, each character has a unique number assigned to it for computers to decode and display characters. Broadly used standard is ASCII. For this project we use ASCII standard also since MATLAB supports the decoding and encoding of ASCII represented values by default.
+	\begin{figure}[h]
+		\centering
+		\includegraphics{ascii.pdf}
+		\caption{ASCII codes of some characters}
+	\end{figure}
 
+	Let's start with the assumption of our text to be hidden being 
+	\textbf{\texttt{Hello World!}}. First thing we do is to get the ASCII values of the characters. Then, we convert this integer numbers to their binary representations. When we do, we get an array of binary represented string, each item in the array corresponds to a character in the message.
+	
+	\begin{equation}
+		\begin{bmatrix}
+			\text{Binary} & \text{Decimal} & \text{Character} \\
+			'1001000' & 72 & \text{H} \\
+			'1100101' & 65 & \text{e}\\
+			'1101100' & 108 & \text{l}\\
+			'1101100' & 108 & \text{l}\\
+			'1101111' & 157 & \text{o}\\
+		\end{bmatrix} \\ \\		
+	\end{equation}
+	\begin{center}
+		Binary representation of the word \textbf{\texttt{Hello}}
+	\end{center}
+	
+	Having the binary representations of audio signal and the string itself, what we have to do is to embed the binary representations of string into the audio signal itself. As shown previously, right-most bit is the Least Significant Bit of a binary number, changing it doesn't change total value so much.
+	
+	We are going to iterate over the every bit of the binary representation of the string, and for every bit, we are going to change the least significant bit the binary representation of a sample from audio signal.
+	
+	\subsection{Extracting the message from the Audio}
+	
+	Extracting the message from an audio signal is exactly same as embedding it, but now in reverse order. Of course we start by reading the audio signal in binary form. Then, we know that when we read last bits of each sample and group them by 8 bits, each group will correspond to a decimal number. Every decimal number I have will correspond to a unique character. By writing the characters we retrieved side by side, we get the string which was embedded to the audio file.
+	
+	\begin{equation}
+			\begin{bmatrix}
+				'00000000011001\color{red}1' \\
+				'00000000000000\color{red}0' \\
+				'00000000001100\color{red}0' \\
+				'00000011010000\color{red}1' \\
+				'00010010010101\color{red}0' \\
+				'00001011010111\color{red}0' \\
+				'00100011001001\color{red}0' \\
+			\vdots
+			\end{bmatrix} \\ \\		
+		\end{equation}
+	\begin{center}
+		First 7 sample of an audio file which carries hidden information
+	\end{center}
+	If you compare the binary representation of letter \texttt{H} and the Least Significant Bits of the samples from the carrier file -highlighted in red-, you'll notice they are exactly same.
 	
 	\section{Implementation}
 	The program has been implemented on \textit{MATLAB} as a necessity of the course and its competency on processing media signals.

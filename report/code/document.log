@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.29)  20 MAY 2020 14:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.29)  20 MAY 2020 14:31
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -337,34 +337,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
-(./document.bbl) [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/p
-dftex.map}
+(./document.bbl [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pd
+ftex.map}
 
 
- <../figures/binary_num-eps-converted-to.pdf>] (./document.aux) ) 
+ <../figures/binary_num-eps-converted-to.pdf>]) [2
+
+] (./document.aux) ) 
 Here is how much of TeX's memory you used:
  3972 strings out of 492616
  64734 string characters out of 6129480
- 139494 words of memory out of 5000000
+ 140494 words of memory out of 5000000
  7870 multiletter control sequences out of 15000+600000
  35675 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,7n,39p,722b,252s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/te
-xlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2019/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/f
-onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1
-/urw/times/utmbi8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/time
-s/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a.
-pfb>
-Output written on document.pdf (1 page, 109674 bytes).
+ 41i,8n,39p,722b,271s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r
+.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.
+pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.p
+fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
+usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr
+/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/tex
+live/2019/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2019
+/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dis
+t/fonts/type1/urw/times/utmri8a.pfb>
+Output written on document.pdf (2 pages, 118727 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 66 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

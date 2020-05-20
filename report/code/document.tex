@@ -61,7 +61,21 @@
 		0.143 & -0.471 & 0.643 & \hdots \\
 	\end{bmatrix}
 	\end{equation}
+	The samples can be multiplied with a greater number to become integer values because the precision numbers representations are more complex than integer. Our input signal was decoded with 16 bits per sample. Thus, we multiplied each sample with $2^{15} = 32768$ for them to become integers that can be represented by 16 bits.
+	\begin{equation}
+		\begin{bmatrix}
+		'000000000110011' \\
+		'000000000000000' \\
+		'000000000011000' \\
+		'000000110100001' \\
+		\vdots
+		\end{bmatrix} \\ \\		
+	\end{equation}
+	\begin{center}
+		Actual first 4 sample of the audio file
+	\end{center}
 
+	
 	\section{Implementation}
 	The program has been implemented on \textit{MATLAB} as a necessity of the course and its competency on processing media signals.
 	

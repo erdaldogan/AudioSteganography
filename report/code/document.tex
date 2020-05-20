@@ -139,7 +139,7 @@
 	
 	During reverse steganography process, we store LSB of every signal sample in a char array till the last 7 bits of the char array is $1011100$, which is binary representation of $"\backslash"$ in US-ASCII. When all the message bits are collected, we convert the binary numbers to decimal numbers. Then reconstructing the string by converting the decimal values with corresponding US-ASCII representations.
 	
-	\section{Results}
+	\section{Results \& Conclusion}
 	
 	The method and implementation have been described in detail. As a result of the processes above, the MATLAB program creates an audio signal which carries a hidden text in it.
 	\begin{figure}[h]
@@ -159,8 +159,9 @@
 	This is what distinguishes LSB algorithm from other alternatives. It is impossible to notice any difference from the original signal if someone doesn't scrutinize the signal.  
 	
 	\section{Conclusion}
-	This project covered the implementation of an steganography progam from scratch, not using any external libraries or plugins but default functions of MATLAB.
+	This project covered the implementation of a steganography program from scratch, not using any external libraries or plugins but default functions of MATLAB. Through the project we learned about the audio signals in detail, how they are stored in computer memory and processed. Also, how the little changes on an audio signal doesn't make any noticeable difference to the original signal.
 	
+	\textit{Least Significant Bit Algorithm} is a basic level, relatively easy to understand and implement compared to other steganography algorithms. Each of the has trade-offs between security, robustness, discoverability etc. For this project, since it is not going to be used professionally in any area, we didn't had to dwell on those trade-offs. 
 	
 	
 	\bibliographystyle{IEEEtran}

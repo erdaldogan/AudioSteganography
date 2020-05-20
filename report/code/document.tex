@@ -41,14 +41,14 @@
 	Informations that we had from articles, we observed that,if
 	16 bits per sample audio sequences are used,  the maximum LSB depth that
 	can be used for LSB-based watermarking without causing
-	noticeable perceptual distortion is the fourth LSB layer. According to the article, The tests
+	noticeable perceptual distortion is the fourth LSB layer\cite{Jayaram}. According to the article, The tests
 	were performed with a large collection of audio samples
 	and individuals with different backgrounds and musical
 	experience.
 	
 	\section{Method}
 	\subsection{Embedding the Message to the Audio}
-	Audio signals consist of thousands of samples which are represented as numerical values. As one can tell, all the numerical values are being stored in binary format by our computers. The binary format consist of 1's and 0's only. By looking at the positions of these 0 and 1's, we can get a decimal number. Right most digit of a binary number corresponds to $2^0$, as you move from right to left, power of 2 increases by 1. By adding the numbers shown as powers of 2 at where the bits on that position is 1, you can get a decimal number.
+	Audio signals consist of thousands of samples which are represented as numerical values. As one can tell, all the numerical values are being stored in binary format by our computers. The binary format consist of 1's and 0's only. By looking at the positions of these 0 and 1's, we can get a decimal number\cite{Jayaram}. Right most digit of a binary number corresponds to $2^0$, as you move from right to left, power of 2 increases by 1. By adding the numbers shown as powers of 2 at where the bits on that position is 1, you can get a decimal number.
 	\begin{figure}[h]
 		\centering
 		\includegraphics[scale=.5]{binary_num.eps}

@@ -79,6 +79,16 @@
 	\section{Implementation}
 	The program has been implemented on \textit{MATLAB} as a necessity of the course and its competency on processing media signals.
 	
+	Firstly, we needed to convert the signal samples and message file into bits. While converting  signal samples, we multiplied each sample with $2^{15} = 32768$ so sample could be represented in 16 bits and to increase the precision. After the multiplication, we stored the absolute value of these samples in an array and if sample was negative stored their index in another array. Then we converted absolute value array into binary number. To convert the text file, we read the file. Then stored the US-ASCII representation of the each character. Afterwards converted US-ASCII representation to the binary number.
+	
+	During the embedding process, first we checked the ratio between number of signal samples and the number of characters in input text file. Since each character is represented by 7 bits in US-ASCII format, we multiplied number of characters by 7 and compared the result of multiplication with the number of samples. If the result of multiplication  is higher than number of signal samples, it means even if we use every sample's Least Significant Bit we weren't able to fit it to signal. Therefore, when multiplication result is higher than number of signal samples, program gives a warning about this string being too long. If string is long enough to be embedded into the signal samples, we basically change the LSB of each signal sample with the converted message file's bits. Input text file has to end with $"\backslash "$ character to notice the end of embedded bits while extracting the message from sound file. Once every string character's bits embedded to LSBs we need to reconstruct the signal by negating the samples which were negative before the embedding process. After reconstructing new embedded signal we create an .wav file with hidden text inside.
+	
+	During reverse steganography process, we store LSB of every signal sample in a char array till the last 7 bits of the char array is $1011100$, which is binary representation of $"\backslash"$ in US-ASCII. When all the message bits are collected, we convert the binary numbers to decimal numbers. Then reconstructing the string by converting the decimal values with corresponding US-ASCII representations.
+	
+	
+	
+	
+	
 	\bibliographystyle{IEEEtran}
 	\bibliography{references.bib}
 

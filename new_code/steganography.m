@@ -1,8 +1,7 @@
 clear all; clc;
 
 [sound, fs] = audioread("chirp.wav");
-% audioinfo(filename)
-%soundsc(sound);
+
 
 [sound_bits, neg_loc] = getBitsFromSound("chirp.wav");
 string_bits = getBitsFromString("msg.txt");

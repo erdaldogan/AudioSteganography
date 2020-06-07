@@ -38,17 +38,17 @@
 	If we were to use more sophisticated methods we could use \textit{Threshold Based LSB} or \textit{Watermarking Method} algorithms. In \textit{Threshold Based LSB} method number of message bits changes depending on the amplitude of sampled signal\cite{threshold}. On the otherhand in \textit{Watermarking Method}, the LSB watermark encoder usually selects a subset and limits the number of of LSBs that can be imperceptibly modified during watermark embedding. The substitution operation on the LSBs is performed on this subset\cite{1286709}.
 	
 	
-	Informations that we had from articles, we observed that,if
+	Informations that we had from articles, we observed that, if
 	16 bits per sample audio sequences are used,  the maximum LSB depth that
 	can be used for LSB-based watermarking without causing
-	noticeable perceptual distortion is the fourth LSB layer. According to the article, The tests
+	noticeable perceptual distortion is the fourth LSB layer\cite{Jayaram}. According to the article, The tests
 	were performed with a large collection of audio samples
 	and individuals with different backgrounds and musical
 	experience.
 	
 	\section{Method}
 	\subsection{Embedding the Message to the Audio}
-	Audio signals consist of thousands of samples which are represented as numerical values. As one can tell, all the numerical values are being stored in binary format by our computers. The binary format consist of 1's and 0's only. By looking at the positions of these 0 and 1's, we can get a decimal number. Right most digit of a binary number corresponds to $2^0$, as you move from right to left, power of 2 increases by 1. By adding the numbers shown as powers of 2 at where the bits on that position is 1, you can get a decimal number.
+	Audio signals consist of thousands of samples which are represented as numerical values. As one can tell, all the numerical values are being stored in binary format by our computers. The binary format consist of 1's and 0's only. By looking at the positions of these 0 and 1's, we can get a decimal number\cite{Jayaram}. Right most digit of a binary number corresponds to $2^0$, as you move from right to left, power of 2 increases by 1. By adding the numbers shown as powers of 2 at where the bits on that position is 1, you can get a decimal number.
 	\begin{figure}[h]
 		\centering
 		\includegraphics[scale=.5]{binary_num.eps}
@@ -111,7 +111,7 @@
 	
 	\subsection{Extracting the message from the Audio}
 	
-	Extracting the message from an audio signal is exactly same as embedding it, but now in reverse order. Of course we start by reading the audio signal in binary form. Then, we know that when we read last bits of each sample and group them by 8 bits, each group will correspond to a decimal number. Every decimal number I have will correspond to a unique character. By writing the characters we retrieved side by side, we get the string which was embedded to the audio file.
+	Extracting the message from an audio signal is exactly same as embedding it, but in reverse order. Of course we start by reading the audio signal in binary form. Then, we know that when we read last bits of each sample and group them by 8 bits, each group of 8 will correspond to a decimal number. Then, every decimal number will correspond to a unique character. By writing the characters we retrieved side by side, we get the string which was embedded to the audio file.
 	
 	\begin{equation}
 			\begin{bmatrix}
@@ -132,6 +132,39 @@
 	
 	\section{Implementation}
 	The program has been implemented on \textit{MATLAB} as a necessity of the course and its competency on processing media signals.
+	
+	Firstly, we needed to convert the signal samples and message file into bits. While converting  signal samples, we multiplied each sample with $2^{15} = 32768$ so sample could be represented in 16 bits and to increase the precision. After the multiplication, we stored the absolute value of these samples in an array and if sample was negative stored their index in another array. Then we converted absolute value array into binary number. To convert the text file, we read the file. Then stored the US-ASCII representation of the each character. Afterwards converted US-ASCII representation to the binary number.
+	
+	During the embedding process, first we checked the ratio between number of signal samples and the number of characters in input text file. Since each character is represented by 7 bits in US-ASCII format, we multiplied number of characters by 7 and compared the result of multiplication with the number of samples. If the result of the multiplication is higher than number of signal samples, it means even if we use every sample's Least Significant Bit we weren't able to fit it to signal. Therefore, when multiplication result is higher than number of signal samples, program gives a warning about this string being too long. If string is long enough to be embedded into the signal samples, we basically change the LSB of each signal sample with the converted message file's bits. Input text file has to end with $"\backslash "$ character to notice the end of embedded bits while extracting the message from sound file. Once every string character's bits embedded to LSBs we need to reconstruct the signal by negating the samples which were negative before the embedding process. After reconstructing new embedded signal we create an .wav file with hidden text inside.
+	
+	During reverse steganography process, we store LSB of every signal sample in a char array till the last 7 bits of the char array is $1011100$, which is binary representation of $"\backslash"$ in US-ASCII. When all the message bits are collected, we convert the binary numbers to decimal numbers. Then reconstructing the string by converting the decimal values with corresponding US-ASCII representations.
+	
+	\section{Results \& Conclusion}
+	
+	The method and implementation have been described in detail. As a result of the processes above, the MATLAB program creates an audio signal which carries a hidden text in it.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=.32]{orig_vs_hidden.eps}
+		\caption{Original Signal and Text Embedded signal side by side}
+		\label{fig:versus}
+	\end{figure}
+	As can be seen from the Figure \ref{fig:versus}, there are not any imperceptible difference between original and manipulated difference. They are so similar to each so that even if one puts the plot on top of each other, it would be impossible to see the difference.
+		\begin{figure}[h]
+		\centering
+		\includegraphics[scale=.5]{combined.eps}
+		\caption{Original Signal and Text Embedded on top of each other}
+		\label{fig:versus}
+	\end{figure}
+
+	This is what distinguishes LSB algorithm from other alternatives. It is impossible to notice any difference from the original signal if someone doesn't scrutinize the signal.  
+	
+	\section{Conclusion}
+	This project covered the implementation of a steganography program from scratch, not using any external libraries or plugins but default functions of MATLAB. Through the project we learned about the audio signals in detail, how they are stored in computer memory and processed. Also, how the little changes on an audio signal doesn't make any noticeable difference to the original signal.
+	
+	\textit{Least Significant Bit Algorithm} is a basic level, relatively easy to understand and implement compared to other steganography algorithms. Each of the has trade-offs between security, robustness, discoverability etc. For this project, since it is not going to be used professionally in any area, we didn't had to dwell on those trade-offs. 
+	
+	To further improve this project, new algorithms can be implemented and the differences can be observed. Also, one should not confine themselves with standard forms of the algorithms. Making changes on them, creating your custom steganography algorithms from scratch or basing on existing ones for your case is always a good idea. 
+	
 	
 	\bibliographystyle{IEEEtran}
 	\bibliography{references.bib}
